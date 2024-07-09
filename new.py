@@ -19,7 +19,8 @@ if uploaded_file is not None:
     
     # Display the uploaded image
     st.image(img, caption='Uploaded Image.', use_column_width=True)
-    
+    img = Image.open(uploaded_file).convert('RGB')
+
     # Preprocess the image
     img = img.resize((64, 64))
     img_array = np.array(img) / 255.0  # Normalize
