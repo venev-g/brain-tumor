@@ -4,11 +4,10 @@ import streamlit as st
 import os
 from PIL import Image
 import io
-from pathlib import Path
 
 # Define paths to the datasets
-training_set_path = Path("brain-tumor/braintumor/trainingset")
-test_set_path = Path("brain-tumor/braintumor/testset")
+training_set_path = "braintumor/trainingset"
+test_set_path = "braintumor/testset"
 
 # Preprocessing the Training set
 train_datagen = tf.keras.preprocessing.image.ImageDataGenerator(
